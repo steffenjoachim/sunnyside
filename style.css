@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --clr-soft-red: hsl(7, 99%, 70%);
+  --clr-yellow: hsl(51, 100%, 49%);
+  --clr-dark-desaturated-cyan-graphic-design-text: hsl(167, 40%, 24%);
+  --clr-dark-blue-photography-text: hsl(198, 62%, 26%);
+  --clr-dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+  --clr-light-cyan-footer: hsl(167, 44%, 70%);
+  --clr-grayish-testimonial-header: hsl(220, 4%, 67%);
+  /* Neutral */
+  --clr-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --clr-very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --clr-dark-grayish-blue: hsl(232, 10%, 55%);
+  --clr-grayish-blue: hsl(210, 4%, 67%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-light-gray-background: hsl(26, 100%, 99%);
+}
+
+html {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+}
+
+header {
+  background-image: url("./assets/desktop/image-header.jpg");
+  background-size: cover; /* Bildgröße auf Cover setzen */
+  background-position: center; /* Bild zentrieren */
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 2rem 5rem 0 2em;
+}
+
+.sunnyside {
+  height: 1.75rem;
+}
+
+ul {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+ul li {
+  display: inline;
+}
+
+li:last-child {
+  padding-left: 2rem;
+}
+
+a {
+  color: var(--clr-white);
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  border: 2px solid transparent; 
+  transition: all 0.3s ease-in-out; 
+}
+
+a:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  border: 2px solid var(--clr-white); 
+}
+
+h1 {
+  color: var(--clr-white);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.arrow-down {
+  margin-top: 6.5rem;
+  width: 100vw;
+  display: flex;
+}
+
+.arrow-down img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-50-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    width: 100%;
+}
+
+.w-50 {
+    background-color: var(--clr-light-gray-background);
+    width: 100%; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.w-50-heading {
+  align-self: flex-start;
+  padding-left: 9rem;
+  font-size: 2rem;
+}
+
+.w-50-text {
+  padding: 2rem 9rem;
+  color: var(--clr-dark-grayish-blue);
+  font-size: .85rem;
+}
+
+.learn-more {
+  color: var(--clr-black);
+  font-family: "Fraunces", serif;
+  position: relative;
+  align-self: flex-start;
+  margin-left: 9rem;
+  text-decoration: none; /* Deaktiviert die Standard-Unterstreichung */
+  padding-left: 0;
+}
+
+.learn-more::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem; /* Abstand unter dem Text */
+  width: 80%;
+  height: 3px; /* Höhe der Linie */
+  background-color: var(--clr-yellow); /* Farbe der Linie */
+  opacity: 0.7;
+  border-radius: 5px; /* Abrundung an beiden Enden */
+  transition: width 0.3s ease-in-out;
+}
+
+.learn-more.red::after {
+  background-color: var(--clr-soft-red); /* Roten Hintergrund für die Linie */
+}
+
+.learn-more:hover::after {
+  width: 100%;
+  left: 0; /* Du kannst hier animieren, z.B. von 0 auf 100% beim Hover */
+}
+
+.graphic-design, .photography {
+  background-image: url(assets/desktop/image-graphic-design.jpg) ;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.graphic-design-header {
+  font-size: 2rem;
+  color: var(--clr-dark-desaturated-cyan-graphic-design-text);
+}
+
+.graphic-design-text {
+  margin: 2rem 9rem 5rem 9rem;
+  color: var(--clr-dark-desaturated-cyan-graphic-design-text);
+  font-size: .9rem;
+  text-align: center;
+}
+
+.photography {
+  background-image: url(assets/desktop/image-photography.jpg) ;
+}
+
+.photography-header {
+  font-size: 2rem;
+  color: var(--clr-dark-blue-photography-text);
+}
+
+.photography-text {
+  margin: 2rem 9rem 5rem 9rem;
+  color: var(--clr-dark-blue-photography-text);
+  font-size: .9rem;
+  text-align: center;
+}
+
+.clients-testimonials {
+  background-color: var(--clr-light-gray-background);
+}
+
+.testimonials-header {
+  text-align: center;
+  color: var(--clr-grayish-testimonial-header);
+  letter-spacing: .5rem;
+  font-weight: 900;
+  margin: 4rem 0;
+}
+
+.client-testimonials-wrap {
+  display: flex;
+  margin: 0 4rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+
+.testimonial + .testimonial {
+  padding-left: 3rem;
+}
+
+.testimonial-img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-bottom: 4rem;
+}
+
+.testimonial-text {
+  color: var(--clr-dark-grayish-blue);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.testimonial-person {
+  color: var(--clr-black);
+  font-weight: 900;
+  font-family: "Fraunces", serif;
+  margin-bottom: .75rem;
+}
+
+.testimonial-persons-role {
+  font-size: .75rem;
+  color: var(--clr-grayish-testimonial-header);
+  margin-bottom: 5rem;
+}
+
+.bottom-img-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.bottom-img {
+  width: 100%;
+  aspect-ratio: 1 / 1.3;
+}
+
+footer {
+  background-color: var(--clr-light-cyan-footer);
+}
+
+.sunnyside-footer {
+  padding-top: 3rem;
+  transform: scale(1.5, 1.5); 
+  transform-origin: center;
+  display: block; 
+  margin: 0 auto;
+}
+
+.footer-nav {
+  margin-top: 3rem;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.footer-ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-a {
+  color: var(--clr-dark-moderate-cyan-footer);
+}
+
+.footer-a:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  border: 2px solid var(--clr-white);
+}
+
+.footer-li:last-child {
+  padding-left: 0;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.social-icon:hover {
+  opacity: .7;
+  cursor: pointer;
+}
